@@ -96,7 +96,7 @@ resource "aws_route_table_association" "public_association_2" {
 
 # Crear un par de llaves para acceder a las instancias EC2
 resource "aws_key_pair" "main_key" {
-  key_name   = "cloud2"
+  key_name   = "cloud2-terraform"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAxTzY2lcP5Giu2B0jjRMxg4HAzJymS80OoH88No2ZHZd2eHSv0y24eTEQJZzqTIy6nD9Q2lF69aO6St8A1SG+zpUXcDLN3qICzxxw2mgr3nUke7ocZM64JI2stAMAPN1w9nRGR6dob/s2pqt0hiBKI5WKybmbxd6yKA3RHITAO0g8/UP7Leg6G8wbxqUgK3qcp54YgXxnrmyxq+wcHm7Vm/R2533TReCZzwdwU8fxt2uDNFDG5Rz2Osh2w22D1OaBxNi/haN9klezkPY7fcE3prLAxKiHXbOYOhuNIl94FIOvXwqiw6GEiZwm9gXtPid64yNd6nnfNjG4VBfLRyUSkAzHyGyFOeY3xTlThrnIv4FpnDlz1tvvfrpGp8W+psVg4nMRb68mAsZ4tcF2zpRdd7MW6z5ZXQwILPa9UlI/tPRX7TLtCfnE9a5R1zG4QGB2W7NslH2SEkd0+jCaAvo0G84EwqLhkgvhF5YOToN0gCd30j4h01hj3jynBf21+tPCF/3iys5/L5Klhqa/vnllNAxP8yToY7EVeMXQ2fKOyEv25W6zLM8S/KcZOKp50PJEH+2EnETszkfhCS5jhgEsOulrtjXTo/0O5bXcVHOzPBoiszaJijflPmcKed2EGzug6gy4rGCEyduCvdWUTySkdwPPXcpcneagd0BjvIDp/Q== lpestrada@unicesar.edu.co"
 }
 
