@@ -137,7 +137,7 @@ resource "aws_instance" "public_instance_1" {
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet_1.id
   key_name        = aws_key_pair.main_key.key_name
-  user_data       = file("commands.sh")
+  user_data       = file("comands.sh")
   vpc_security_group_ids = [aws_security_group.public_sg.id]
   associate_public_ip_address = true
 
