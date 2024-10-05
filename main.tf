@@ -2,7 +2,7 @@
 
 # Creación de la VPC
 resource "aws_vpc" "cloud2_vpc" {
-  cidr_block = "70.0.0.0/16"  # Rango de IP para la VPC
+  cidr_block = "30.0.0.0/16"  # Rango de IP para la VPC
   enable_dns_support = true    # Habilitar soporte DNS
   enable_dns_hostnames = true   # Habilitar nombres de host DNS
 
@@ -16,7 +16,7 @@ resource "aws_vpc" "cloud2_vpc" {
 # Primera subred pública
 resource "aws_subnet" "public_subnet_1" {
   vpc_id            = aws_vpc.cloud2_vpc.id  # ID de la VPC donde se crea la subred
-  cidr_block        = "70.0.1.0/24"           # Rango de IP para la subred pública 1
+  cidr_block        = "30.0.1.0/24"           # Rango de IP para la subred pública 1
   availability_zone = "us-west-2a"            # Zona de disponibilidad
 
   tags = {
@@ -27,7 +27,7 @@ resource "aws_subnet" "public_subnet_1" {
 # Segunda subred pública
 resource "aws_subnet" "public_subnet_2" {
   vpc_id            = aws_vpc.cloud2_vpc.id  # ID de la VPC donde se crea la subred
-  cidr_block        = "70.0.2.0/24"           # Rango de IP para la subred pública 2
+  cidr_block        = "30.0.2.0/24"           # Rango de IP para la subred pública 2
   availability_zone = "us-west-2b"            # Zona de disponibilidad
 
   tags = {
@@ -40,7 +40,7 @@ resource "aws_subnet" "public_subnet_2" {
 # Primera subred privada
 resource "aws_subnet" "private_subnet_1" {
   vpc_id            = aws_vpc.cloud2_vpc.id  # ID de la VPC donde se crea la subred
-  cidr_block        = "70.0.3.0/24"           # Rango de IP para la subred privada 1
+  cidr_block        = "30.0.3.0/24"           # Rango de IP para la subred privada 1
   availability_zone = "us-west-2a"            # Zona de disponibilidad
 
   tags = {
@@ -51,7 +51,7 @@ resource "aws_subnet" "private_subnet_1" {
 # Segunda subred privada
 resource "aws_subnet" "private_subnet_2" {
   vpc_id            = aws_vpc.cloud2_vpc.id  # ID de la VPC donde se crea la subred
-  cidr_block        = "70.0.4.0/24"           # Rango de IP para la subred privada 2
+  cidr_block        = "30.0.4.0/24"           # Rango de IP para la subred privada 2
   availability_zone = "us-west-2b"            # Zona de disponibilidad
 
   tags = {
