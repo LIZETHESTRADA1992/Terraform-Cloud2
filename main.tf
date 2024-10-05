@@ -137,8 +137,10 @@ resource "aws_instance" "public_instance_1" {
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet_1.id
   key_name        = aws_key_pair.main_key.key_name
+  user_data       = file("commands.sh")
   vpc_security_group_ids = [aws_security_group.public_sg.id]
   associate_public_ip_address = true
+
 
   tags = {
     Name = "PublicInstance1"
@@ -151,6 +153,7 @@ resource "aws_instance" "public_instance_2" {
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet_2.id
   key_name        = aws_key_pair.main_key.key_name
+  user_data       = file("commands.sh")
 vpc_security_group_ids = [aws_security_group.public_sg.id]
   associate_public_ip_address = true
 
