@@ -1,8 +1,5 @@
-!/bin/bash
+#!/bin/bash
 sudo yum update -y
-
-# Instalar Docker (Amazon Linux 2 usa yum)
-sudo amazon-linux-extras install docker -y
 
 # Iniciar Docker
 sudo systemctl start docker
@@ -12,6 +9,7 @@ sudo systemctl enable docker
 
 # Añadir el usuario 'ec2-user' al grupo docker para poder ejecutar Docker sin sudo
 sudo usermod -aG docker ec2-user
+
 
 # Instalar Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
